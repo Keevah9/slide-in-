@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;500;700&family=Lato:wght@100;300;400&family=Manrope:wght@200;300;400;500;800&family=Outfit:wght@400;700&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+    /* border: 2px solid red; */
+}
+
+img, 
+video,
+svg{
+    max-width: 100%;
+    border-radius: 10px;
+    min-height: 10%;
+    margin: 0 auto;
+    display: block;
+}
+.slide-in{
+    opacity: 0;
+    transition: all .5s;
+}
+.slide-in.active{
+    transform: translateX(0%) scale(0.95);
+    opacity: 1;
+}
+.left.slide-in{
+    transform: translateX(-30%) scale(0.95);
+}
+.right.slide-in {
+    transform: translateX(30%) scale(0.95);
+}
+html:focus-within{
+    scroll-behavior: smooth;
+}
+html,
+body{
+    height: 100%;
+    text-align: center;
+}
+body{
+    font-family: 'Be Vietnam Pro', sans-serif ;
+}
+
+
+/* default styling */
+:root{
+    --text-pri-color: black;
+    --bg-body: white;
+    --bg-main-section: orangered;
+    --bg-footer: hsl(232, 12%, 13%);
+    --text-sec-color:  white;
+
+    --fs-head-500: 2.5rem;
+    --fs-head-600: 3rem;
+    --fs-100: .8rem;
+    --fs-200: 1rem;
+    --fs-300:  1.3rem;
+    --fs-400: 2rem;
+    
+    --fs-body : var(var(--fs-100));
+    --fs-head: var(--fs-head-500);
+    --fs-nav: var(--fs-200);
+
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+}
+
+/* utilities */
+.bg-body{
+    background-color: var(--bg-body);
+}
+.bg-main{
+    background-color: var(--bg-main-section);
+}
+.bg-footer{
+    background-color: var(--bg-footer);
+}
+.text-color-pri{
+    color: var(--text-pri-color);
+}
+.text-color-sec{
+    color: var(--text-sec-color);
+}
+.fw-bold{
+    font-weight: var(--fw-bold);
+}
+.fw-normal{
+    font-weight: var(--fw-normal);
+}
+.fw-medium{
+    font-weight: var(--fw-medium);
+}
+.fs-body-100{
+    font-size: var(--fs-100);
+}
+.fs-body-200 {
+    font-size: var(--fs-200);
+}
+.fs-body-300{
+    font-size: var(--fs-300);
+}
+.fs-nav-100{
+    font-size:var(--fs-100) ;
+}
+.fs-nav-200{
+    font-size: var(--fs-200);
+}
+.fs-400{
+    font-size: var(--fs-400);
+}
+.fs-head-500{
+    font-size: var(--fs-head-500);
+}
+.fs-head-600{
+    font-size: var(--fs-head-600);
+}
+
+
+/* styling */
+
+header{
+    width: 100%;
+    min-height:5rem ;
+}
+.navCon{
+    width: 100%;
+    padding:  1rem 1.5rem;
+}
+.navLinks{
+    display: none;
+    width: 100%;
+}
+.headerCon{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.images{
+    width: 8%;
+    height: 6%;
+}
+.close{
+    display: none;
+}
+ul{
+    height: 0;
+}
+.addHeight{
+    height: 15rem;
+}
+li{
+    padding: .5rem 1rem;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--text-sec-color);
+}
+li a:hover{
+    font-size: var(--fs-200);
+    color: var(--text-pri-color);
+}
+
+.mainContainer{
+    max-width: 100%;
+    padding: 0 1rem;
+    padding-top: 1.5rem;
+    min-height: 35vh;
+}
+.mainContainer > *{
+    padding: 1.5rem 0;
+}
+.content{
+    max-width: 50%;
+    text-align: left;
+}
+.content1{
+    max-width: 40rem;
+    margin: 0 auto;
+}
+.content1 > *{
+    padding: 1rem 0;
+}
+.content > *{
+    padding: 1rem  0.5rem;
+}
+p{
+    line-height: 1.6rem;
+    max-width: fit-content;
+}
+.btn{
+    border: none;
+    background-color: var(--bg-main-section);
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    color: var(--text-sec-color);
+}
+.btnWhite{
+    background-color: var(--bg-footer);
+}
+
+footer{
+    max-width: 100%;
+    min-height: 5rem;
+}
+footer .navLinks{
+    display: block;
+}
+footer .navLinks a:hover{
+    color: orangered;
+}
+
+/* media queries */
+
+@media all and (max-width:560px){
+    .btn{
+        display: block;
+        margin: 0 auto;
+    }
+    .content{
+        max-width: 100%;
+        text-align: center;
+    }
+    footer{
+        min-height: 15rem;
+    }
+}
+@media all and (min-width: 560px){
+    :root{
+        --fs-header: var(--fs-head-600);
+        --fs-body: var(--fs-300);
+        --fs-nav: var(--fs-100)
+    }
+    .flex {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    footer .navCon{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+        footer .navLinks {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0;
+        }
+        .images{
+            display: none;
+        }
+                .navCon {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem 1.5rem;
+                    height: auto;
+                }
+        
+                .navLinks {
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                }
+
+}

@@ -118,7 +118,7 @@ header{
 .navCon{
     width: 100%;
     padding:  1rem 1.5rem;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .navLinks{
     height: 0;
@@ -228,7 +228,7 @@ footer .navLinks a:hover{
         text-align: center;
     }
     footer{
-        min-height: 15rem;
+        min-height: 17rem;
     }
 }
 @media all and (min-width: 560px){

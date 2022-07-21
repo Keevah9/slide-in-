@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font: inherit;
-    /* border: 2px solid red; */
 }
 
 img, 
@@ -16,20 +15,6 @@ svg{
     min-height: 10%;
     margin: 0 auto;
     display: block;
-}
-.slide-in{
-    opacity: 0;
-    transition: all .5s;
-}
-.slide-in.active{
-    transform: translateX(0%) scale(0.95);
-    opacity: 1;
-}
-.left.slide-in{
-    transform: translateX(-30%) scale(0.95);
-}
-.right.slide-in {
-    transform: translateX(30%) scale(0.95);
 }
 html:focus-within{
     scroll-behavior: smooth;
@@ -45,6 +30,7 @@ body{
 
 
 /* default styling */
+
 :root{
     --text-pri-color: black;
     --bg-body: white;
@@ -69,6 +55,7 @@ body{
 }
 
 /* utilities */
+
 .bg-body{
     background-color: var(--bg-body);
 }
@@ -121,6 +108,9 @@ body{
 
 /* styling */
 
+
+/* header */
+
 header{
     width: 100%;
     min-height:5rem ;
@@ -131,11 +121,8 @@ header{
     overflow: hidden;
 }
 .navLinks{
-    /* display: none; */
     height: 0;
-    /* overflow: hidden; */
     transition:  all .3s linear;
-    /* width: 100%; */
 }
 .headerCon{
     display: flex;
@@ -167,6 +154,8 @@ li a:hover{
     font-size: var(--fs-200);
     color: var(--text-pri-color);
 }
+
+/* main container */
 
 .mainContainer{
     max-width: 100%;
@@ -205,6 +194,16 @@ p{
 .btnWhite{
     background-color: var(--bg-footer);
 }
+.slide-in {
+    opacity: 0;
+    transition: all .5s;
+}
+.slide-in.active {
+    transform: translateX(0%) scale(0.95);
+    opacity: 1;
+}
+
+/* footer */
 
 footer{
     max-width: 100%;

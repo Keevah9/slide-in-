@@ -50,12 +50,10 @@ function navToggle(e){
     console.log(this)
     const current = e.target
     if(current == menu){
-        navBar.style.display = 'block'
         navCon.classList.toggle('addHeight')
         menu.style.display = 'none'
         closeBtn.style.display = "block";
     }else{
-        navBar.style.display = 'none'
         navCon.classList.remove('addHeight')
         closeBtn.style.display = 'none'
         menu.style.display = "block";

@@ -128,13 +128,16 @@ header{
 .navCon{
     width: 100%;
     padding:  1rem 1.5rem;
+    overflow: hidden;
 }
 .navLinks{
-    display: none;
-    width: 100%;
+    /* display: none; */
+    height: 0;
+    /* overflow: hidden; */
+    transition:  all .3s linear;
+    /* width: 100%; */
 }
 .headerCon{
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -146,19 +149,19 @@ header{
 .close{
     display: none;
 }
-ul{
-    height: 0;
-}
+
 .addHeight{
-    height: 15rem;
+    height: 17rem;
 }
 li{
-    padding: .5rem 1rem;
     list-style: none;
 }
-a{
+li a{
     text-decoration: none;
     color: var(--text-sec-color);
+    display: block;
+    padding: .8rem 1rem;
+    transition:  all .3s linear;
 }
 li a:hover{
     font-size: var(--fs-200);

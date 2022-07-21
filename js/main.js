@@ -51,7 +51,7 @@ function navToggle(e){
     const current = e.target
     if(current == menu){
         navBar.style.display = 'block'
-        navCon.classList.add('addHeight')
+        navCon.classList.toggle('addHeight')
         menu.style.display = 'none'
         closeBtn.style.display = "block";
     }else{
